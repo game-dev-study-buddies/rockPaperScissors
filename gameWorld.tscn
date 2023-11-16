@@ -1,0 +1,146 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqs6yrm85dtl6"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_srekn"]
+[ext_resource type="FontVariation" uid="uid://bdsljgj1qw5nn" path="res://pixelFont.tres" id="2_prtui"]
+
+[sub_resource type="FontVariation" id="FontVariation_kx6m7"]
+base_font = ExtResource("2_prtui")
+
+[sub_resource type="Animation" id="Animation_qhhmr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nuk4u"]
+resource_name = "Show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nheut"]
+_data = {
+"RESET": SubResource("Animation_qhhmr"),
+"Show": SubResource("Animation_nuk4u")
+}
+
+[node name="gameWorld" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_srekn")
+
+[node name="Rock" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 256.0
+offset_bottom = 576.0
+text = "Rock"
+
+[node name="Paper" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 448.0
+offset_right = 672.0
+offset_bottom = 576.0
+text = "Paper"
+
+[node name="Scissors" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 448.0
+offset_right = 1088.0
+offset_bottom = 576.0
+text = "Scissors"
+
+[node name="opponentRock" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 64.0
+offset_right = 1056.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = SubResource("FontVariation_kx6m7")
+theme_override_font_sizes/font_size = 40
+text = "Opponent choses
+Rock!"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/opponentRock"]
+libraries = {
+"": SubResource("AnimationLibrary_nheut")
+}
+
+[node name="opponentPaper" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 64.0
+offset_right = 1056.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = SubResource("FontVariation_kx6m7")
+theme_override_font_sizes/font_size = 40
+text = "Opponent choses
+Paper!"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/opponentPaper"]
+libraries = {
+"": SubResource("AnimationLibrary_nheut")
+}
+
+[node name="opponentScissors" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 64.0
+offset_right = 1056.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = SubResource("FontVariation_kx6m7")
+theme_override_font_sizes/font_size = 40
+text = "Opponent choses
+Scissors!"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/opponentScissors"]
+libraries = {
+"": SubResource("AnimationLibrary_nheut")
+}
+
+[connection signal="pressed" from="Control/Rock" to="Control" method="_on_rock_pressed"]
+[connection signal="pressed" from="Control/Paper" to="Control" method="_on_paper_pressed"]
+[connection signal="pressed" from="Control/Scissors" to="Control" method="_on_scissors_pressed"]
