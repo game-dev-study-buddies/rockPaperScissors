@@ -11,15 +11,15 @@ func computerChoice():
 	if computer == 1:
 		get_node("opponentRock/AnimationPlayer").play('Show')
 		await get_node("opponentRock/AnimationPlayer").animation_finished
-		get_node("opponentRock/AnimationPlayer").queue_free()
+		get_node("opponentRock/AnimationPlayer").stop()
 	elif computer == 2:
 		get_node("opponentPaper/AnimationPlayer").play('Show')
 		await get_node("opponentPaper/AnimationPlayer").animation_finished
-		get_node("opponentPaper/AnimationPlayer").queue_free()
+		get_node("opponentPaper/AnimationPlayer").stop()
 	elif computer == 3:
 		get_node("opponentScissors/AnimationPlayer").play('Show')
 		await get_node("opponentScissors/AnimationPlayer").animation_finished
-		get_node("opponentScissors/AnimationPlayer").queue_free()
+		get_node("opponentScissors/AnimationPlayer").stop()
 
 func playerWin():
 	if player == 1 and computer == 3:
