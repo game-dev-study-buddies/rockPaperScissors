@@ -3,6 +3,7 @@ extends Control
 
 var player
 var computer
+var computer_animation
 
 
 func node_animation(node):
@@ -13,31 +14,50 @@ func node_animation(node):
 func computerChoice():
 	computer = randi_range(1, 3)
 	if computer == 1:
-		node_animation("opponentRock/AnimationPlayer")
+		computer_animation = "opponentRock/AnimationPlayer"
+		node_animation(computer_animation)
 	elif computer == 2:
-		node_animation("opponentPaper/AnimationPlayer")		
+		computer_animation = "opponentPaper/AnimationPlayer"
+		node_animation(computer_animation)
 	elif computer == 3:
-		node_animation("opponentScissors/AnimationPlayer")
+		computer_animation = "opponentScissors/AnimationPlayer"
+		node_animation(computer_animation)
 
 func playerWin():
 	if player == 1 and computer == 3:
+		print("Win with Rock")
+		
+		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	elif player == 2 and computer == 1:
+		print("Win with Paper")
+		
+		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	elif player == 3 and computer == 2:
+		print("Win with Scissors")
+		
+		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	
 func playerLose():
 	if player == 1 and computer == 2:
+		print("Lose")
+		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
 	elif player == 2 and computer == 3:
+		print("Lose")
+		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
 	elif player == 3 and computer == 1:
+		print("Lose")
+		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
-	
 	
 func tie():
 	if player == computer:
+		print("Tie")
+		await get_node(computer_animation).animation_finished
 		node_animation("playerTie/AnimationPlayer")
 		
 func checkResult():
