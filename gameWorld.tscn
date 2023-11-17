@@ -141,6 +141,27 @@ libraries = {
 "": SubResource("AnimationLibrary_nheut")
 }
 
+[node name="computerWin" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 128.0
+offset_right = 696.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = SubResource("FontVariation_kx6m7")
+theme_override_font_sizes/font_size = 40
+text = "You Lose!"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/computerWin"]
+libraries = {
+"": SubResource("AnimationLibrary_nheut")
+}
+
 [connection signal="pressed" from="Control/Rock" to="Control" method="_on_rock_pressed"]
 [connection signal="pressed" from="Control/Paper" to="Control" method="_on_paper_pressed"]
 [connection signal="pressed" from="Control/Scissors" to="Control" method="_on_scissors_pressed"]

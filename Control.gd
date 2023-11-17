@@ -5,21 +5,19 @@ var player
 var computer
 
 
-	
+func node_animation(node):
+	get_node(node).play('Show')
+	await get_node(node).animation_finished
+	get_node(node).stop()
+
 func computerChoice():
 	computer = randi_range(1, 3)
 	if computer == 1:
-		get_node("opponentRock/AnimationPlayer").play('Show')
-		await get_node("opponentRock/AnimationPlayer").animation_finished
-		get_node("opponentRock/AnimationPlayer").stop()
+		node_animation("opponentRock/AnimationPlayer")
 	elif computer == 2:
-		get_node("opponentPaper/AnimationPlayer").play('Show')
-		await get_node("opponentPaper/AnimationPlayer").animation_finished
-		get_node("opponentPaper/AnimationPlayer").stop()
+		node_animation("opponentPaper/AnimationPlayer")		
 	elif computer == 3:
-		get_node("opponentScissors/AnimationPlayer").play('Show')
-		await get_node("opponentScissors/AnimationPlayer").animation_finished
-		get_node("opponentScissors/AnimationPlayer").stop()
+		node_animation("opponentScissors/AnimationPlayer")
 
 func playerWin():
 	if player == 1 and computer == 3:
@@ -31,11 +29,11 @@ func playerWin():
 	
 func playerLose():
 	if player == 1 and computer == 2:
-		print("You Lose!")
+		node_animation("computerWin/AnimationPlayer")
 	elif player == 2 and computer == 3:
-		print("You Lose!")
+		node_animation("computerWin/AnimationPlayer")
 	elif player == 3 and computer == 1:
-		print("You Lose!")
+		node_animation("computerWin/AnimationPlayer")
 	
 	
 func tie():
