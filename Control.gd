@@ -21,24 +21,24 @@ func computerChoice():
 
 func playerWin():
 	if player == 1 and computer == 3:
-		print("You Win!")
+		node_animation("playerWin/AnimationPlayer")
 	elif player == 2 and computer == 1:
-		print("You Win!")
+		node_animation("playerWin/AnimationPlayer")
 	elif player == 3 and computer == 2:
-		print("You Win!")
+		node_animation("playerWin/AnimationPlayer")
 	
 func playerLose():
 	if player == 1 and computer == 2:
-		node_animation("computerWin/AnimationPlayer")
+		node_animation("playerLose/AnimationPlayer")
 	elif player == 2 and computer == 3:
-		node_animation("computerWin/AnimationPlayer")
+		node_animation("playerLose/AnimationPlayer")
 	elif player == 3 and computer == 1:
-		node_animation("computerWin/AnimationPlayer")
+		node_animation("playerLose/AnimationPlayer")
 	
 	
 func tie():
 	if player == computer:
-		print("Tie")
+		node_animation("playerTie/AnimationPlayer")
 		
 func checkResult():
 	playerWin()
