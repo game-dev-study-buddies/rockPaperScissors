@@ -1,3 +1,4 @@
 res://gameWorld.tscn
 res://Control.gd
+res://Global/Utilities.gd
 res://Main.tscn
