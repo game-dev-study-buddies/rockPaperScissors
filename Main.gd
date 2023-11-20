@@ -1,8 +1,6 @@
 extends Node2D
 
 
-var banana
-
 func _ready():
 	pass # Replace with function body.
 
