@@ -1,3 +1,5 @@
 res://gameWorld.tscn
-res://Control.gd
+res://Main.gd
+res://Global/playerVariables.gd
 res://Main.tscn
+res://Control.gd
