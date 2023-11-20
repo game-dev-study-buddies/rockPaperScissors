@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://nnn1i1exlxrn"]
+
+[ext_resource type="Script" path="res://EndGame.gd" id="1_8d1fg"]
+[ext_resource type="FontVariation" uid="uid://bdsljgj1qw5nn" path="res://pixelFont.tres" id="1_rxpuy"]
+
+[sub_resource type="GDScript" id="GDScript_ibayt"]
+script/source = "extends Label
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = PlayerVariables.game_end_text
+"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8d1fg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 552.0
+offset_top = 144.0
+offset_right = 592.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("1_rxpuy")
+theme_override_font_sizes/font_size = 70
+script = SubResource("GDScript_ibayt")
+
+[node name="PlayAgain" type="Button" parent="."]
+offset_left = 264.0
+offset_top = 480.0
+offset_right = 359.0
+offset_bottom = 511.0
+text = "Play Again?"
+
+[node name="ExitMainMenu" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 480.0
+offset_right = 909.0
+offset_bottom = 511.0
+text = "Exit to Main Menu
+"
+
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="ExitMainMenu" to="." method="_on_exit_main_menu_pressed"]

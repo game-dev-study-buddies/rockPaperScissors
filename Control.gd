@@ -65,11 +65,25 @@ func roundResult():
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerTie/AnimationPlayer")
-		
+
+#func reset():
+#	PlayerVariables.player_win = 0
+#	PlayerVariables.player_lose = 0
+#	PlayerVariables.player_tie = 0
+
+func gameResult ():
+	if PlayerVariables.player_win == 2:
+		PlayerVariables.game_end_text = "Player Wins!" 
+		get_tree().change_scene_to_file("res://EndGame.tscn")
+	
+	if PlayerVariables.player_lose == 2:
+		PlayerVariables.game_end_text = "Player Loses!"
+		get_tree().change_scene_to_file("res://EndGame.tscn")
+
 func checkResult():
 	roundResult()
+	gameResult()
 
-	
 func _on_rock_pressed():
 	player = 1
 	computerChoice()

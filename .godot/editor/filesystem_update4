@@ -1,3 +1,6 @@
 res://Main.tscn
 res://gameWorld.tscn
 res://Control.gd
+res://EndGame.tscn
+res://Global/playerVariables.gd
+res://EndGame.gd
