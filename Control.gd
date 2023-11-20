@@ -11,6 +11,7 @@ func node_animation(node):
 	await get_node(node).animation_finished
 	get_node(node).stop()
 
+
 func computerChoice():
 	computer = randi_range(1, 3)
 	if computer == 1:
@@ -23,7 +24,9 @@ func computerChoice():
 		computer_animation = "opponentScissors/AnimationPlayer"
 		node_animation(computer_animation)
 
-func playerWin():
+
+func roundResult():
+#	Check if Player wins this round
 	if player == 1 and computer == 3:
 		PlayerVariables.player_win += 1
 		
@@ -40,7 +43,7 @@ func playerWin():
 		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	
-func playerLose():
+#	Check if Player woses this round
 	if player == 1 and computer == 2:
 		PlayerVariables.player_lose += 1
 		
@@ -57,34 +60,44 @@ func playerLose():
 		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
 	
-func tie():
+#	Check if Player ties
 	if player == computer:
 		
 		PlayerVariables.player_tie += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerTie/AnimationPlayer")
-		
-func checkResult():
-	playerWin()
-	playerLose()
-	tie()
 
+
+func gameResult ():
+	if PlayerVariables.player_win == 2:
+		PlayerVariables.game_end_text = "Player Wins!" 
+		get_tree().change_scene_to_file("res://EndGame.tscn")
 	
+	if PlayerVariables.player_lose == 2:
+		PlayerVariables.game_end_text = "Player Loses!"
+		get_tree().change_scene_to_file("res://EndGame.tscn")
+
+
+func checkResult():
+	roundResult()
+	gameResult()
+
+
 func _on_rock_pressed():
 	player = 1
 	computerChoice()
 	checkResult()
+
 
 func _on_paper_pressed():
 	player = 2
 	computerChoice()
 	checkResult()
 
+
 func _on_scissors_pressed():
 	player = 3
 	computerChoice()
 	checkResult()
-
-
 

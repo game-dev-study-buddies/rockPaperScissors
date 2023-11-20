@@ -1,4 +1,5 @@
 Label
+Button
 Node
 SubViewport
 SubViewportContainer
@@ -6,5 +7,4 @@ Node2D
 AnimationPlayer
 RichTextLabel
 Control
-Button
 MenuButton
