@@ -4,9 +4,7 @@ extends Control
 var player
 var computer
 var computer_animation
-var player_win = 0
-var player_lose = 0
-var player_tie = 0
+
 
 func node_animation(node):
 	get_node(node).play('Show')
@@ -28,19 +26,19 @@ func computerChoice():
 func playerWin():
 	if player == 1 and computer == 3:
 		print("Win with Rock")
-		player_win += 1
+		PlayerVariables.player_win += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	elif player == 2 and computer == 1:
 		print("Win with Paper")
-		player_win += 1
+		PlayerVariables.player_win += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	elif player == 3 and computer == 2:
 		print("Win with Scissors")
-		player_win += 1
+		PlayerVariables.player_win += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
@@ -48,19 +46,19 @@ func playerWin():
 func playerLose():
 	if player == 1 and computer == 2:
 		print("Lose")
-		player_lose += 1
+		PlayerVariables.player_lose += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
 	elif player == 2 and computer == 3:
 		print("Lose")
-		player_lose += 1
+		PlayerVariables.player_lose += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
 	elif player == 3 and computer == 1:
 		print("Lose")
-		player_lose += 1
+		PlayerVariables.player_lose += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
@@ -68,7 +66,7 @@ func playerLose():
 func tie():
 	if player == computer:
 		print("Tie")
-		player_tie += 1
+		PlayerVariables.player_tie += 1
 		
 		await get_node(computer_animation).animation_finished
 		node_animation("playerTie/AnimationPlayer")
@@ -77,9 +75,9 @@ func checkResult():
 	playerWin()
 	playerLose()
 	tie()
-	print(player_win)
-	print(player_lose)
-	print(player_tie)
+	print(PlayerVariables.player_win)
+	print(PlayerVariables.player_lose)
+	print(PlayerVariables.player_tie)
 	
 func _on_rock_pressed():
 	player = 1
