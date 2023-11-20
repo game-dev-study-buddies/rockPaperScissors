@@ -23,7 +23,8 @@ func computerChoice():
 		computer_animation = "opponentScissors/AnimationPlayer"
 		node_animation(computer_animation)
 
-func playerWin():
+func roundResult():
+#	Check if Player wins this round
 	if player == 1 and computer == 3:
 		PlayerVariables.player_win += 1
 		
@@ -40,7 +41,7 @@ func playerWin():
 		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	
-func playerLose():
+#	Check if Player woses this round
 	if player == 1 and computer == 2:
 		PlayerVariables.player_lose += 1
 		
@@ -57,7 +58,7 @@ func playerLose():
 		await get_node(computer_animation).animation_finished
 		node_animation("playerLose/AnimationPlayer")
 	
-func tie():
+#	Check if Player ties
 	if player == computer:
 		
 		PlayerVariables.player_tie += 1
@@ -66,9 +67,7 @@ func tie():
 		node_animation("playerTie/AnimationPlayer")
 		
 func checkResult():
-	playerWin()
-	playerLose()
-	tie()
+	roundResult()
 
 	
 func _on_rock_pressed():
