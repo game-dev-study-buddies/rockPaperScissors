@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
 <<<<<<< HEAD
+<<<<<<< HEAD
 ::res://::1700675219
 animatedText.gd::GDScript::-1::1699053707::0::1::::<>Node2D<>::
 Control.gd::GDScript::-1::1700638680::0::1::::<>Control<>::
@@ -172,15 +173,19 @@ UI_Flat_Textfield_01.png::CompressedTexture2D::5194074645688498384::1700588876::
 UI_Flat_Textfield_02.png::CompressedTexture2D::3867998037148367762::1700588876::1700588880::1::::<><>::
 =======
 ::res://::1700589417
+=======
+::res://::1700593784
+>>>>>>> 904002d (feat: add Parallax Background)
 animatedText.gd::GDScript::-1::1700158025::0::1::::<>Node2D<>::
 Control.gd::GDScript::-1::1700507568::0::1::::<>Control<>::
 EndGame.gd::GDScript::-1::1700507568::0::1::::<>Node2D<>::
-EndGame.tscn::PackedScene::940128090209342323::1700589300::0::1::::<><>::res://EndGame.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
-gameWorld.tscn::PackedScene::3548526980278377849::1700589300::0::1::::<><>::res://Control.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
+EndGame.tscn::PackedScene::940128090209342323::1700593356::0::1::::<><>::res://EndGame.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
+gameWorld.tscn::PackedScene::3548526980278377849::1700593356::0::1::::<><>::res://Control.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
 icon.svg::CompressedTexture2D::8719062768934382727::1700158025::1700589418::1::::<><>::
-Main.gd::GDScript::-1::1700503788::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::1664882860950614705::1700588723::0::1::::<><>::res://Main.gd
-pixelFont.tres::FontVariation::2634830303492792175::1700589314::0::1::::<><>::uid://6b5vntok3xm4::::res://Font/hero-speak.ttf
+Main.gd::GDScript::-1::1700590581::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::1664882860950614705::1700593431::0::1::::<><>::res://Main.gd<>res://ParallaxBackground.gd<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://dq4mk8npxkb7e::::res://Background Art/mountains_a.png<>uid://bobwhtivkcjga::::res://Background Art/clouds.png<>uid://cg43ohgfovpwr::::res://Background Art/mountains_b.png<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
+ParallaxBackground.gd::GDScript::-1::1700593063::0::1::::<>ParallaxBackground<>::
+pixelFont.tres::FontVariation::2634830303492792175::1700589314::0::1::::<><>::uid://6b5vntok3xm4
 README.md::TextFile::-1::1700158024::0::1::::<><>::
 ::res://Background Art/::1700589314
 clouds.png::CompressedTexture2D::3372478158047495232::1700589314::1700589314::1::::<><>::
