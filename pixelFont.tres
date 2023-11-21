@@ -1,6 +1,6 @@
 [gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bdsljgj1qw5nn"]
 
-[ext_resource type="FontFile" uid="uid://6b5vntok3xm4" path="res://ScighoAssets/hero-speak.ttf" id="1_4w1b1"]
+[ext_resource type="FontFile" uid="uid://6b5vntok3xm4" path="res://Font/hero-speak.ttf" id="1_4w1b1"]
 
 [resource]
 base_font = ExtResource("1_4w1b1")
