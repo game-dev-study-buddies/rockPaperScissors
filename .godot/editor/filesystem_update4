@@ -1,11 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-res://Main.gd
->>>>>>> 35aebb6 (feat: add exit button to main, remove settings menu button)
-=======
->>>>>>> 904002d (feat: add Parallax Background)
 res://Main.tscn
-res://gameWorld.tscn
-res://EndGame.tscn
-res://ParallaxBackground.gd
