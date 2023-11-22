@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://xyqm3mmw6lmv"]
+[gd_scene load_steps=12 format=3 uid="uid://xyqm3mmw6lmv"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_cy8cj"]
 [ext_resource type="Script" path="res://ParallaxBackground.gd" id="2_7r31u"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c2a1eu6yyjsj0" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png" id="8_ad558"]
 [ext_resource type="Texture2D" uid="uid://ddt1setb8ogkk" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png" id="9_kpuc5"]
 [ext_resource type="Texture2D" uid="uid://celtq4nf5x65" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png" id="10_bwbg7"]
+[ext_resource type="AudioStream" uid="uid://d3ams4dft5f65" path="res://Audio/Background2.ogg" id="11_3afvi"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cy8cj")
@@ -132,6 +133,11 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_3afvi")
+volume_db = -15.0
+bus = &"Music"
 
 [connection signal="pressed" from="UI/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="UI/Exit" to="." method="_on_exit_pressed"]

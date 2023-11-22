@@ -1,16 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700679686
+::res://::1700679757
 animatedText.gd::GDScript::-1::1699053707::0::1::::<>Node2D<>::
 Control.gd::GDScript::-1::1700679616::0::1::::<>Control<>::
 EndGame.gd::GDScript::-1::1700679616::0::1::::<>Node2D<>::
-EndGame.tscn::PackedScene::940128090209342323::1700679662::0::1::::<><>::res://EndGame.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres<>res://ParallaxBackground.gd<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://dq4mk8npxkb7e::::res://Background Art/mountains_a.png<>uid://bobwhtivkcjga::::res://Background Art/clouds.png<>uid://cg43ohgfovpwr::::res://Background Art/mountains_b.png<>uid://c2a1eu6yyjsj0::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png<>uid://ddt1setb8ogkk::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png<>uid://celtq4nf5x65::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png
-gameWorld.tscn::PackedScene::3548526980278377849::1700679662::0::1::::<><>::res://Control.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://c2a1eu6yyjsj0::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png<>uid://ddt1setb8ogkk::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png<>uid://celtq4nf5x65::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png<>uid://b3eso5nnstupo::::res://UI Art/UI_Flat_Orange.png
+EndGame.tscn::PackedScene::940128090209342323::1700679693::0::1::::<><>::res://EndGame.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres<>res://ParallaxBackground.gd<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://dq4mk8npxkb7e::::res://Background Art/mountains_a.png<>uid://bobwhtivkcjga::::res://Background Art/clouds.png<>uid://cg43ohgfovpwr::::res://Background Art/mountains_b.png<>uid://c2a1eu6yyjsj0::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png<>uid://ddt1setb8ogkk::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png<>uid://celtq4nf5x65::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png
+gameWorld.tscn::PackedScene::3548526980278377849::1700679693::0::1::::<><>::res://Control.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://c2a1eu6yyjsj0::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png<>uid://ddt1setb8ogkk::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png<>uid://celtq4nf5x65::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png<>uid://b3eso5nnstupo::::res://UI Art/UI_Flat_Orange.png
 icon.svg::CompressedTexture2D::8719062768934382727::1698718540::1700679688::1::::<><>::
 Main.gd::GDScript::-1::1700679616::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::1664882860950614705::1700679662::0::1::::<><>::res://Main.gd<>res://ParallaxBackground.gd<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://dq4mk8npxkb7e::::res://Background Art/mountains_a.png<>uid://bobwhtivkcjga::::res://Background Art/clouds.png<>uid://cg43ohgfovpwr::::res://Background Art/mountains_b.png<>uid://bdsljgj1qw5nn::::res://pixelFont.tres<>uid://c2a1eu6yyjsj0::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png<>uid://ddt1setb8ogkk::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png<>uid://celtq4nf5x65::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png
+Main.tscn::PackedScene::1664882860950614705::1700679692::0::1::::<><>::res://Main.gd<>res://ParallaxBackground.gd<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://dq4mk8npxkb7e::::res://Background Art/mountains_a.png<>uid://bobwhtivkcjga::::res://Background Art/clouds.png<>uid://cg43ohgfovpwr::::res://Background Art/mountains_b.png<>uid://bdsljgj1qw5nn::::res://pixelFont.tres<>uid://c2a1eu6yyjsj0::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png<>uid://ddt1setb8ogkk::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png<>uid://celtq4nf5x65::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png
 ParallaxBackground.gd::GDScript::-1::1700679616::0::1::::<>ParallaxBackground<>::
-pixelFont.tres::FontVariation::2634830303492792175::1700588839::0::1::::<><>::uid://6b5vntok3xm4::::res://Font/hero-speak.ttf
+pixelFont.tres::FontVariation::2634830303492792175::1700588839::0::1::::<><>::uid://6b5vntok3xm4
 README.md::TextFile::-1::1700157673::0::1::::<><>::
+default_bus_layout.tres::AudioBusLayout::2463200039469774658::1700679757::0::1::::<><>::
+::res://Audio/::1700679763
+Background2.ogg::AudioStreamOggVorbis::9125311949213016528::1700679763::1700679763::1::::<><>::
+Background.ogg::AudioStreamOggVorbis::8204402794615854959::1700679763::1700679763::1::::<><>::
+Button.wav::AudioStreamWAV::5010939312666926903::1700679763::1700679763::1::::<><>::
+GameLose.wav::AudioStreamWAV::880450593572986521::1700679763::1700679763::1::::<><>::
+GameWin.wav::AudioStreamWAV::551735239004851955::1700679763::1700679763::1::::<><>::
 ::res://Background Art/::1700588930
 clouds.png::CompressedTexture2D::3372478158047495232::1700588930::1700588930::1::::<><>::
 desert_a.png::CompressedTexture2D::75160757401954056::1700588930::1700588930::1::::<><>::
