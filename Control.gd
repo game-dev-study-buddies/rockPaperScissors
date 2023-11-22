@@ -2,7 +2,7 @@ extends Control
 
 
 var player
-var computer
+var computer = 3
 var computer_animation
 
 
@@ -13,7 +13,7 @@ func node_animation(node):
 
 
 func computerChoice():
-	computer = randi_range(1, 3)
+#	computer = randi_range(1, 3)
 	if computer == 1:
 		computer_animation = "opponentRock/AnimationPlayer"
 		node_animation(computer_animation)
@@ -29,7 +29,7 @@ func roundResult():
 #	Check if Player wins this round
 	if player == 1 and computer == 3:
 		PlayerVariables.player_win += 1
-		
+
 		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	elif player == 2 and computer == 1:
@@ -43,7 +43,7 @@ func roundResult():
 		await get_node(computer_animation).animation_finished
 		node_animation("playerWin/AnimationPlayer")
 	
-#	Check if Player woses this round
+#	Check if Player loses this round
 	if player == 1 and computer == 2:
 		PlayerVariables.player_lose += 1
 		
@@ -71,10 +71,12 @@ func roundResult():
 
 func gameResult ():
 	if PlayerVariables.player_win == 2:
+		await get_node("playerWin/AnimationPlayer").animation_finished
 		PlayerVariables.game_end_text = "Player Wins!" 
 		get_tree().change_scene_to_file("res://EndGame.tscn")
 	
 	if PlayerVariables.player_lose == 2:
+		await get_node("playerLose/AnimationPlayer").animation_finished
 		PlayerVariables.game_end_text = "Player Loses!"
 		get_tree().change_scene_to_file("res://EndGame.tscn")
 

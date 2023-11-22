@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700588923
+::res://::1700675219
 animatedText.gd::GDScript::-1::1699053707::0::1::::<>Node2D<>::
-Control.gd::GDScript::-1::1700588665::0::1::::<>Control<>::
+Control.gd::GDScript::-1::1700638680::0::1::::<>Control<>::
 EndGame.gd::GDScript::-1::1700588665::0::1::::<>Node2D<>::
-EndGame.tscn::PackedScene::940128090209342323::1700588665::0::1::::<><>::res://EndGame.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
-gameWorld.tscn::PackedScene::3548526980278377849::1700588665::0::1::::<><>::res://Control.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
+EndGame.tscn::PackedScene::940128090209342323::1700639177::0::1::::<><>::res://EndGame.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres
+gameWorld.tscn::PackedScene::3548526980278377849::1700639413::0::1::::<><>::res://Control.gd<>uid://bdsljgj1qw5nn::::res://pixelFont.tres<>uid://bcn5faufoace::::res://Background Art/desert_a.png<>uid://c2a1eu6yyjsj0::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png<>uid://ddt1setb8ogkk::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png<>uid://celtq4nf5x65::::res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png<>uid://b3eso5nnstupo::::res://UI Art/UI_Flat_Orange.png
 icon.svg::CompressedTexture2D::8719062768934382727::1698718540::1700588725::1::::<><>::
 Main.gd::GDScript::-1::1700588665::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::1664882860950614705::1700502775::0::1::::<><>::res://Main.gd
+Main.tscn::PackedScene::1664882860950614705::1700639177::0::1::::<><>::res://Main.gd
 pixelFont.tres::FontVariation::2634830303492792175::1700588839::0::1::::<><>::uid://6b5vntok3xm4
 README.md::TextFile::-1::1700157673::0::1::::<><>::
 ::res://Background Art/::1700588930
@@ -29,12 +29,14 @@ Silly_Placeholders.png::CompressedTexture2D::1909691056322573593::1699051531::17
 Sprite_sheet 80's Retro Font.png::CompressedTexture2D::4753326987344149177::1699051531::1700588839::1::::<><>::
 ::res://Global/::1700588665
 playerVariables.gd::GDScript::-1::1700588665::0::1::::<>Node<>::
-::res://UI Art/::1700588900
+::res://UI Art/::1700632833
 Spritesheet_UI_Flat.png::CompressedTexture2D::13260534890684937::1700588899::1700588900::1::::<><>::
 Spritesheet_UI_Flat_Button_01.png::CompressedTexture2D::3482097027528200865::1700588899::1700588900::1::::<><>::
 Spritesheet_UI_Flat_Button_02.png::CompressedTexture2D::6884683775997007362::1700588899::1700588900::1::::<><>::
 Spritesheet_UI_Flat_Select_01.png::CompressedTexture2D::7466321416906307185::1700588899::1700588900::1::::<><>::
 Spritesheet_UI_Flat_Select_02.png::CompressedTexture2D::1178724171115645510::1700588899::1700588900::1::::<><>::
+UI_Checkmark.png::CompressedTexture2D::8596152569946484491::1700632832::1700632833::1::::<><>::
+UI_Flat_Orange.png::CompressedTexture2D::4361085319957158516::1700594287::1700594288::1::::<><>::
 ::res://UI Art/Sprites/::1700588881
 UI_Flat_Banner_01_Downward.png::CompressedTexture2D::4855115081466025130::1700588874::1700588880::1::::<><>::
 UI_Flat_Banner_01_Upward.png::CompressedTexture2D::2983405253283264078::1700588874::1700588880::1::::<><>::
