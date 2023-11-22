@@ -1,8 +1,9 @@
 extends Node2D
 
+@onready var audio_player = $AudioStreamPlayer2D
 
 func _ready():
-	pass # Replace with function body.
+	audio_player.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

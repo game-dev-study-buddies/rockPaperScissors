@@ -1,6 +1,7 @@
 res://Main.tscn
-res://Main.gd
 res://gameWorld.tscn
 res://EndGame.tscn
-res://EndGame.gd
+res://default_bus_layout.tres
+res://Main.gd
 res://Control.gd
+res://EndGame.gd

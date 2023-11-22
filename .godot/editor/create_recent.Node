@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+AudioStreamPlayer2D
 HBoxContainer
 AnimationPlayer
 AnimatedSprite2D
@@ -7,11 +7,9 @@ TileMap
 Node2D
 Control
 Container
-=======
 ParallaxLayer
 ParallaxBackground
 CanvasLayer
->>>>>>> 904002d (feat: add Parallax Background)
 Label
 RichTextLabel
 AspectRatioContainer

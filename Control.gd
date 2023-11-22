@@ -4,7 +4,10 @@ extends Control
 var player
 var computer
 var computer_animation
+@onready var background = $"../Background"
 
+func _ready():
+	background.play()
 
 func node_animation(node):
 	get_node(node).play('Show')
