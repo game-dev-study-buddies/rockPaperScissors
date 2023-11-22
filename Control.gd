@@ -2,7 +2,7 @@ extends Control
 
 
 var player
-var computer = 3
+var computer
 var computer_animation
 
 
@@ -13,7 +13,7 @@ func node_animation(node):
 
 
 func computerChoice():
-#	computer = randi_range(1, 3)
+	computer = randi_range(1, 3)
 	if computer == 1:
 		computer_animation = "opponentRock/AnimationPlayer"
 		node_animation(computer_animation)

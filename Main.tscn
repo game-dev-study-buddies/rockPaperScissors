@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://xyqm3mmw6lmv"]
+[gd_scene load_steps=11 format=3 uid="uid://xyqm3mmw6lmv"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_cy8cj"]
 [ext_resource type="Script" path="res://ParallaxBackground.gd" id="2_7r31u"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bobwhtivkcjga" path="res://Background Art/clouds.png" id="4_m35kp"]
 [ext_resource type="Texture2D" uid="uid://cg43ohgfovpwr" path="res://Background Art/mountains_b.png" id="5_sfl74"]
 [ext_resource type="FontVariation" uid="uid://bdsljgj1qw5nn" path="res://pixelFont.tres" id="6_fnl6e"]
+[ext_resource type="Texture2D" uid="uid://c2a1eu6yyjsj0" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png" id="8_ad558"]
+[ext_resource type="Texture2D" uid="uid://ddt1setb8ogkk" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png" id="9_kpuc5"]
+[ext_resource type="Texture2D" uid="uid://celtq4nf5x65" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png" id="10_bwbg7"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cy8cj")
@@ -59,34 +62,76 @@ metadata/_edit_lock_ = true
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="UI"]
-offset_left = 320.0
-offset_top = 128.0
-offset_right = 832.0
-offset_bottom = 256.0
+[node name="Title" type="Label" parent="UI"]
+texture_filter = 1
+offset_left = 160.0
+offset_top = 112.0
+offset_right = 997.0
+offset_bottom = 334.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("6_fnl6e")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "Rock Paper Scissors:
 Enterprise Edition"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_lock_ = true
 
-[node name="Play" type="Button" parent="UI"]
-offset_left = 192.0
-offset_top = 448.0
+[node name="Play" type="TextureButton" parent="UI"]
+texture_filter = 1
+offset_left = 240.0
+offset_top = 384.0
 offset_right = 448.0
 offset_bottom = 576.0
+texture_normal = ExtResource("8_ad558")
+texture_pressed = ExtResource("9_kpuc5")
+texture_hover = ExtResource("10_bwbg7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI/Play"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 141.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("6_fnl6e")
+theme_override_font_sizes/font_size = 40
 text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="Button2" type="Button" parent="UI"]
+[node name="Exit" type="TextureButton" parent="UI"]
+texture_filter = 1
 offset_left = 704.0
-offset_top = 448.0
-offset_right = 960.0
+offset_top = 384.0
+offset_right = 912.0
 offset_bottom = 576.0
+texture_normal = ExtResource("8_ad558")
+texture_pressed = ExtResource("9_kpuc5")
+texture_hover = ExtResource("10_bwbg7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI/Exit"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 141.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("6_fnl6e")
+theme_override_font_sizes/font_size = 40
 text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="UI/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="UI/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="UI/Exit" to="." method="_on_exit_pressed"]
