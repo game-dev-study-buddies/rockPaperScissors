@@ -1,6 +1,3 @@
 res://Main.tscn
-res://Main.gd
 res://gameWorld.tscn
 res://EndGame.tscn
-res://EndGame.gd
-res://Control.gd
