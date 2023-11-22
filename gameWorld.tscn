@@ -1,7 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqs6yrm85dtl6"]
+[gd_scene load_steps=14 format=3 uid="uid://bqs6yrm85dtl6"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_srekn"]
 [ext_resource type="FontVariation" uid="uid://bdsljgj1qw5nn" path="res://pixelFont.tres" id="2_prtui"]
+[ext_resource type="Texture2D" uid="uid://bcn5faufoace" path="res://Background Art/desert_a.png" id="3_t15dm"]
+[ext_resource type="Texture2D" uid="uid://c2a1eu6yyjsj0" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png" id="4_fafg2"]
+[ext_resource type="Texture2D" uid="uid://ddt1setb8ogkk" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png" id="5_ee2cg"]
+[ext_resource type="Texture2D" uid="uid://celtq4nf5x65" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png" id="6_maads"]
+[ext_resource type="Texture2D" uid="uid://b3eso5nnstupo" path="res://UI Art/UI_Flat_Orange.png" id="7_70vgk"]
 
 [sub_resource type="FontVariation" id="FontVariation_kx6m7"]
 base_font = ExtResource("2_prtui")
@@ -69,30 +74,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_srekn")
 
-[node name="Rock" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 448.0
-offset_right = 256.0
-offset_bottom = 576.0
-text = "Rock"
-
-[node name="Paper" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 480.0
-offset_top = 448.0
-offset_right = 672.0
-offset_bottom = 576.0
-text = "Paper"
-
-[node name="Scissors" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 896.0
-offset_top = 448.0
-offset_right = 1088.0
-offset_bottom = 576.0
-text = "Scissors"
-
 [node name="opponentRock" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 816.0
@@ -100,13 +81,14 @@ offset_top = 64.0
 offset_right = 1056.0
 offset_bottom = 128.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.501961, 0.294118, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = SubResource("FontVariation_kx6m7")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "Opponent choses
 Rock!"
 horizontal_alignment = 1
+autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -122,13 +104,14 @@ offset_top = 64.0
 offset_right = 1056.0
 offset_bottom = 128.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.501961, 0.294118, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = SubResource("FontVariation_kx6m7")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "Opponent choses
 Paper!"
 horizontal_alignment = 1
+autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -144,13 +127,14 @@ offset_top = 64.0
 offset_right = 1056.0
 offset_bottom = 128.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.501961, 0.294118, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = SubResource("FontVariation_kx6m7")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "Opponent choses
 Scissors!"
 horizontal_alignment = 1
+autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -169,7 +153,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = SubResource("FontVariation_kx6m7")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 60
 text = "You Lose!"
 horizontal_alignment = 1
 visible_characters = 0
@@ -187,10 +171,10 @@ offset_top = 128.0
 offset_right = 696.0
 offset_bottom = 192.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.427451, 0.141176, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = SubResource("FontVariation_kx6m7")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 60
 text = "You Win!"
 horizontal_alignment = 1
 visible_characters = 0
@@ -208,10 +192,10 @@ offset_top = 128.0
 offset_right = 696.0
 offset_bottom = 192.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.670588, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.501961, 0.294118, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = SubResource("FontVariation_kx6m7")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "Tie!"
 horizontal_alignment = 1
 visible_characters = 0
@@ -228,8 +212,10 @@ offset_top = 24.0
 offset_right = 176.0
 offset_bottom = 82.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.572549, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.360784, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0.705882, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("2_prtui")
 theme_override_font_sizes/font_size = 50
 text = "Win: "
@@ -241,13 +227,127 @@ offset_top = 80.0
 offset_right = 200.0
 offset_bottom = 138.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.0313726, 0.47451, 0.792157, 1)
-theme_override_colors/font_outline_color = Color(0, 0.705882, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.431373, 0.0588235, 0.0666667, 1)
+theme_override_colors/font_outline_color = Color(0.980392, 0.137255, 0.152941, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/font = ExtResource("2_prtui")
 theme_override_font_sizes/font_size = 50
 text = "Lose: "
 script = SubResource("GDScript_xpaoh")
 
-[connection signal="pressed" from="Control/Rock" to="Control" method="_on_rock_pressed"]
-[connection signal="pressed" from="Control/Paper" to="Control" method="_on_paper_pressed"]
-[connection signal="pressed" from="Control/Scissors" to="Control" method="_on_scissors_pressed"]
+[node name="DesertA" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(4.5, 5.0625)
+texture = ExtResource("3_t15dm")
+
+[node name="PlayerInput" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 480.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Rock" type="TextureButton" parent="PlayerInput"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 104.0
+offset_top = -24.0
+offset_right = 312.0
+offset_bottom = 168.0
+texture_normal = ExtResource("4_fafg2")
+texture_pressed = ExtResource("5_ee2cg")
+texture_hover = ExtResource("6_maads")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="PlayerInput/Rock"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 141.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_prtui")
+theme_override_font_sizes/font_size = 40
+text = "Rock"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Paper" type="TextureButton" parent="PlayerInput"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 472.0
+offset_top = -16.0
+offset_right = 680.0
+offset_bottom = 160.0
+texture_normal = ExtResource("4_fafg2")
+texture_pressed = ExtResource("5_ee2cg")
+texture_hover = ExtResource("6_maads")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="PlayerInput/Paper"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 64.0
+offset_right = 156.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_prtui")
+theme_override_font_sizes/font_size = 40
+text = "Paper"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Scissors" type="TextureButton" parent="PlayerInput"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 840.0
+offset_top = -16.0
+offset_right = 1048.0
+offset_bottom = 160.0
+texture_normal = ExtResource("4_fafg2")
+texture_pressed = ExtResource("5_ee2cg")
+texture_hover = ExtResource("6_maads")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="PlayerInput/Scissors"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 64.0
+offset_right = 174.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_prtui")
+theme_override_font_sizes/font_size = 40
+text = "Scissors"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="UiFlatOrange" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(570.5, 552)
+scale = Vector2(11.8247, 5.33333)
+texture = ExtResource("7_70vgk")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="PlayerInput/Rock" to="Control" method="_on_rock_pressed"]
+[connection signal="pressed" from="PlayerInput/Paper" to="Control" method="_on_paper_pressed"]
+[connection signal="pressed" from="PlayerInput/Scissors" to="Control" method="_on_scissors_pressed"]
