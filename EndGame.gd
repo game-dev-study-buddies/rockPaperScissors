@@ -1,5 +1,16 @@
 extends Node2D
 
+@onready var success = $Success
+@onready var failure = $Failure
+
+func end_game_music():
+	if PlayerVariables.game_end_text == "Player Wins!":
+		success.play()
+	else:
+		failure.play()
+
+func _ready():
+	end_game_music()
 
 func reset():
 	PlayerVariables.player_win = 0

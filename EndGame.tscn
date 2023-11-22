@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://nnn1i1exlxrn"]
+[gd_scene load_steps=14 format=3 uid="uid://nnn1i1exlxrn"]
 
 [ext_resource type="Script" path="res://EndGame.gd" id="1_8d1fg"]
 [ext_resource type="FontVariation" uid="uid://bdsljgj1qw5nn" path="res://pixelFont.tres" id="1_rxpuy"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c2a1eu6yyjsj0" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a4.png" id="8_h5d23"]
 [ext_resource type="Texture2D" uid="uid://ddt1setb8ogkk" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a3.png" id="9_eih75"]
 [ext_resource type="Texture2D" uid="uid://celtq4nf5x65" path="res://UI Art/Sprites/UI_Flat_Button_Medium_Press_02a2.png" id="10_kr65f"]
+[ext_resource type="AudioStream" uid="uid://h4i87t6re66j" path="res://Audio/GameWin.wav" id="11_577jl"]
+[ext_resource type="AudioStream" uid="uid://msq5l5l560o8" path="res://Audio/GameLose.wav" id="12_fx1n7"]
 
 [sub_resource type="GDScript" id="GDScript_1n1vu"]
 script/source = "extends Label
@@ -144,6 +146,16 @@ theme_override_font_sizes/font_size = 40
 text = "Main Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Success" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_577jl")
+volume_db = -5.0
+bus = &"Music"
+
+[node name="Failure" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_fx1n7")
+volume_db = -5.0
+bus = &"Music"
 
 [connection signal="pressed" from="UI/PlayAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="UI/ExitMainMenu" to="." method="_on_exit_main_menu_pressed"]
