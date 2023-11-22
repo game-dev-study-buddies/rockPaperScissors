@@ -70,12 +70,12 @@ func roundResult():
 
 
 func gameResult ():
-	if PlayerVariables.player_win == 2:
+	if PlayerVariables.player_win >= 2:
 		await get_node("playerWin/AnimationPlayer").animation_finished
 		PlayerVariables.game_end_text = "Player Wins!" 
 		get_tree().change_scene_to_file("res://EndGame.tscn")
 	
-	if PlayerVariables.player_lose == 2:
+	if PlayerVariables.player_lose >= 2:
 		await get_node("playerLose/AnimationPlayer").animation_finished
 		PlayerVariables.game_end_text = "Player Loses!"
 		get_tree().change_scene_to_file("res://EndGame.tscn")
